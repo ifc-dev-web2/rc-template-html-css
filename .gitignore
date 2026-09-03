@@ -1,0 +1,22 @@
+# Dependências
+node_modules/
+
+# Arquivos de build
+dist/
+build/
+
+# Relatórios
+coverage/
+
+# Sistemas operacionais
+.DS_Store
+Thumbs.db
+
+# Editores
+*.swp
+*.swo
+
+# Variáveis de ambiente
+.env
+.env.*
+!.env.example
