@@ -250,6 +250,24 @@ os participantes.
 Para entender a responsabilidade de cada arquivo, consulte o
 [guia de padronização do código](./docs/guia-padronizacao-codigo.md).
 
+
+## Autoria e contexto acadêmico
+
+Este template foi desenvolvido por
+[Prof. Cristofer Sousa](https://github.com/cristofersousa) como material de
+apoio às atividades de desenvolvimento web do curso técnico do Instituto
+Federal Catarinense — Campus Araquari.
+
+* **Autor:** Prof. Cristofer Sousa;
+* **Instituição:** Instituto Federal Catarinense — Campus Araquari;
+* **Curso:** Tecnologia em Redes de Computadores
+* **Disciplina:** Desenvolvimento Web I
+* **Organização:** [IFC Dev Web II](https://github.com/ifc-dev-web2).
+
+O projeto tem finalidade educacional e pode ser reutilizado como base para
+atividades acadêmicas e projetos de aprendizagem.
+
+
 ## Licença
 
 Este projeto está distribuído sob a licença MIT.
