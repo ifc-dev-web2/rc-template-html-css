@@ -1,17 +1,13 @@
 # Template HTML e CSS
 
-Template inicial para projetos de Desenvolvimento Web do IFC desenvolvidos
-apenas com HTML e CSS.
+Template inicial para projetos de Desenvolvimento Web do Instituto Federal
+Catarinense (IFC), desenvolvidos apenas com HTML e CSS.
 
-## Objetivo
+O repositório oferece uma estrutura simples e configurações compartilhadas de
+formatação para que os projetos da turma mantenham o mesmo padrão de
+organização.
 
-Fornecer uma estrutura comum de arquivos e configurações para que diferentes
-projetos utilizem o mesmo padrão de organização e formatação.
-
-Este repositório também pode ser utilizado como referência para professores,
-estudantes e desenvolvedores que desejam criar seu próprio repositório-base.
-
-## Tecnologias
+## Tecnologias e ferramentas
 
 - HTML5;
 - CSS3;
@@ -19,31 +15,29 @@ estudantes e desenvolvedores que desejam criar seu próprio repositório-base.
 - Prettier;
 - Visual Studio Code.
 
-## Usar este template
+## Como utilizar
 
-Quando o repositório estiver configurado como um template no GitHub:
+1. Clique em **Use this template** e selecione **Create a new repository**;
+2. defina o nome solicitado para a atividade;
+3. clone o novo repositório em seu computador;
+4. abra a pasta completa do projeto no Visual Studio Code;
+5. instale as extensões recomendadas pelo editor;
+6. substitua o conteúdo inicial pelo conteúdo do seu projeto.
 
-1. selecione `Use this template`;
-2. escolha `Create a new repository`;
-3. informe o nome do novo projeto;
-4. clone o repositório criado;
-5. abra a pasta completa no Visual Studio Code;
-6. instale as extensões recomendadas;
-7. substitua o conteúdo inicial pelo conteúdo do seu projeto.
-
-> Um repositório criado a partir do template é independente do repositório
-> original. Por isso, utilize `Use this template` em vez de criar um fork.
+> O repositório criado a partir deste template será independente do original.
+> Portanto, utilize **Use this template**, e não **Fork** ou **Clone**.
 
 ## Estrutura do projeto
 
 ```text
-.
+seuProjeto
 ├── .vscode/
 │   ├── extensions.json
 │   └── settings.json
 ├── css/
 │   └── global.css
 ├── docs/
+│   ├── criar-repositorio-base.md
 │   └── guia-padronizacao-codigo.md
 ├── img/
 │   └── .gitkeep
@@ -56,218 +50,41 @@ Quando o repositório estiver configurado como um template no GitHub:
 └── README.md
 ```
 
-> No diretório `img/`, o arquivo `.gitkeep` é necessário porque o Git não
-> versiona diretórios vazios.
+O arquivo `.gitkeep` mantém o diretório `img/` no versionamento enquanto ele
+estiver vazio. Depois de adicionar a primeira imagem, esse arquivo pode ser
+removido.
 
-## Extensões recomendadas
+## Documentação
 
-### Necessária para a padronização
+- [Guia de padronização do código](./docs/guia-padronizacao-codigo.md): explica
+  o EditorConfig, o Prettier, as configurações do VS Code e as extensões;
+- [Como criar um repositório-base](./docs/criar-repositorio-base.md): apresenta
+  o processo de criação e configuração de um template semelhante a este.
 
-- [Prettier — Code formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
+## Primeiros ajustes no seu projeto
 
-### Opcionais
+Depois de criar seu repositório:
 
-- [Material Icon Theme](https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme);
-- [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer).
+- atualize o título e o conteúdo do `index.html`;
+- desenvolva os estilos em `css/global.css`;
+- armazene as imagens do projeto em `img/`;
+- substitua este README pela apresentação e pelas instruções da atividade;
+- mantenha os arquivos de configuração versionados.
 
-O Prettier é responsável pela formatação do código. As demais extensões melhoram
-a experiência pessoal durante o desenvolvimento.
+## Autoria
 
----
-
-## Criar seu próprio repositório-base
-
-Caso tenha interesse em criar um template ou repositório-base para seus
-projetos, siga as etapas abaixo.
-
-### 1. Crie o arquivo `.editorconfig`
-
-```ini
-root = true
-
-[*]
-charset = utf-8
-end_of_line = lf
-insert_final_newline = true
-indent_style = space
-indent_size = 2
-trim_trailing_whitespace = true
-max_line_length = 80
-
-[*.md]
-trim_trailing_whitespace = false
-```
-
-O EditorConfig estabelece regras básicas que podem ser reconhecidas por
-diferentes editores e ferramentas.
-
-### 2. Crie o arquivo `.prettierrc.json`
-
-```json
-{
-  "printWidth": 80,
-  "tabWidth": 2,
-  "useTabs": false,
-  "singleAttributePerLine": true,
-  "bracketSameLine": false,
-  "semi": true,
-  "singleQuote": true,
-  "endOfLine": "lf"
-}
-```
-
-Esse arquivo define as regras utilizadas pelo Prettier para organizar o código.
-
-### 3. Crie o arquivo `.prettierignore`
-
-```gitignore
-node_modules/
-dist/
-build/
-coverage/
-*.min.css
-*.min.js
-```
-
-Os arquivos e diretórios listados não serão formatados pelo Prettier.
-
-### 4. Crie o arquivo `.vscode/extensions.json`
-
-```json
-{
-  "recommendations": [
-    "esbenp.prettier-vscode",
-    "PKief.material-icon-theme",
-    "ritwickdey.LiveServer"
-  ]
-}
-```
-
-Ao abrir o projeto, o Visual Studio Code poderá recomendar essas extensões.
-
-### 5. Crie o arquivo `.vscode/settings.json`
-
-```json
-{
-  "editor.tabSize": 2,
-  "editor.insertSpaces": true,
-  "editor.detectIndentation": false,
-  "editor.formatOnSave": true,
-  "editor.formatOnPaste": true,
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "editor.renderWhitespace": "boundary",
-  "editor.renderControlCharacters": true,
-  "editor.rulers": [80],
-  "editor.guides.indentation": true,
-  "editor.guides.highlightActiveIndentation": true,
-
-  "[html]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-
-  "[css]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-
-  "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
-}
-```
-
-Essas configurações são aplicadas quando a pasta completa do projeto é aberta
-no Visual Studio Code.
-
-### 6. Crie o arquivo `.gitignore`
-
-```gitignore
-# Dependências
-node_modules/
-
-# Arquivos de build
-dist/
-build/
-
-# Relatórios
-coverage/
-
-# Sistemas operacionais
-.DS_Store
-Thumbs.db
-
-# Editores
-*.swp
-*.swo
-
-# Variáveis de ambiente
-.env
-.env.*
-!.env.example
-```
-
-A pasta `.vscode/` não deve ser ignorada, pois contém configurações
-compartilhadas pelo projeto.
-
-## Validar a configuração
-
-Depois de criar os arquivos, verifique:
-
-- [ ] O Prettier formatou os arquivos HTML e CSS;
-- [ ] os atributos HTML foram organizados em linhas separadas;
-- [ ] a indentação utiliza dois espaços;
-- [ ] a régua aparece na coluna 80;
-- [ ] os espaços utilizados na indentação estão visíveis;
-- [ ] o Live Server conseguiu abrir a página;
-- [ ] o Git reconheceu a pasta `.vscode/`;
-- [ ] os arquivos de configuração aparecem no `git status`.
-
-## Criar o primeiro commit
-
-```bash
-git add .
-git commit -m "chore: cria template base para projetos HTML e CSS"
-git push origin main
-```
-
-## Transformar o repositório em template
-
-No GitHub, acesse:
-
-```text
-Settings → General → Template repository
-```
-
-Marque a opção `Template repository`.
-
-Depois disso, o botão `Use this template` ficará disponível na página principal
-do repositório.
-
-## Padronização do código
-
-As regras de formatação fazem parte do projeto e devem ser utilizadas por todos
-os participantes.
-
-Para entender a responsabilidade de cada arquivo, consulte o
-[guia de padronização do código](./docs/guia-padronizacao-codigo.md).
-
-
-## Autoria e contexto acadêmico
-
-Este template foi desenvolvido por
-[Prof. Cristofer Sousa](https://github.com/cristofersousa) como material de
-apoio às atividades de desenvolvimento web do curso técnico do Instituto
+Desenvolvido pelo [Prof. Cristofer Sousa](https://github.com/cristofersousa)
+como material de apoio às atividades de Desenvolvimento Web do Instituto
 Federal Catarinense — Campus Araquari.
 
-* **Autor:** Prof. Cristofer Sousa;
-* **Instituição:** Instituto Federal Catarinense — Campus Araquari;
-* **Curso:** Tecnologia em Redes de Computadores
-* **Disciplina:** Desenvolvimento Web I
-* **Organização:** [IFC Dev Web II](https://github.com/ifc-dev-web2).
-
-O projeto tem finalidade educacional e pode ser reutilizado como base para
-atividades acadêmicas e projetos de aprendizagem.
-
+| Informação  | Descrição                                         |
+| ----------- | ------------------------------------------------- |
+| Instituição | Instituto Federal Catarinense — Campus Araquari   |
+| Curso       | Técnico em Redes de Computadores                  |
+| Disciplina  | Desenvolvimento Web I                             |
+| Organização | [IFC Dev Web II](https://github.com/ifc-dev-web2) |
 
 ## Licença
 
-Este projeto está distribuído sob a licença MIT.
+Este projeto está disponível sob os termos definidos no arquivo
+[LICENSE](./LICENSE).
