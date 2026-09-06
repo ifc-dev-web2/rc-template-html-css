@@ -55,10 +55,13 @@ Também é possível abrir o arquivo `index.html` diretamente no navegador.
 
 ## Documentação
 
-- [Guia de padronização do código](./docs/guia-padronizacao-codigo.md): explica
-  o EditorConfig, o Prettier, as configurações do VS Code e as extensões;
-- [Como criar um repositório-base](./docs/criar-repositorio-base.md): apresenta
-  o processo de criação e configuração de um template semelhante a este.
+- [Guia de padronização do código](./docs/guia-padronizacao-codigo.md):
+  explica as configurações utilizadas pelo projeto;
+- [Como criar um repositório-base](./docs/criar-repositorio-base.md):
+  apresenta como este template foi estruturado.
+
+Os materiais didáticos de HTML e CSS estão disponíveis no repositório
+[Fundamentos de Desenvolvimento Web I](https://github.com/ifc-dev-web2/rc-web1-fundamentos).
 
 ---
 
