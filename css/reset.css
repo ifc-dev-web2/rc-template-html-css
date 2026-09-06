@@ -1,92 +1,82 @@
 /* ==========================================================================
-   1. MODELO DE CAIXA E COMPORTAMENTO GLOBAL (Inspirado no Josh Comeau)
+   1. MODELO DE CAIXA
    ========================================================================== */
 
-/* Garante que paddings e borders não aumentem o tamanho total dos elementos */
-*, *::before, *::after {
+/*
+ * Mantém a largura e a altura declaradas mesmo quando o elemento recebe
+ * padding ou border.
+ */
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
-/* Remove margens e paddings de layout de quase tudo, preservando o <dialog> */
-*:not(dialog) {
-  margin: 0;
-  padding: 0;
-}
+/* ==========================================================================
+   2. ESPAÇAMENTOS INICIAIS
+   ========================================================================== */
 
-/* Ativa animações nativas para propriedades de tamanho (ex: height: auto) */
-@media (prefers-reduced-motion: no-preference) {
-  html {
-    interpolate-size: allow-keywords;
-  }
+/*
+ * Remove somente as margens mais comuns de layout. Os recuos e marcadores das
+ * listas são preservados para manter sua aparência e seu significado visual.
+ */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
 }
 
 /* ==========================================================================
-   2. CORREÇÕES DE CONSISTÊNCIA (Inspirado no Normalize.css)
+   3. DOCUMENTO E CONTEÚDO
    ========================================================================== */
 
-/* Garante que o body ocupe toda a tela e padroniza a altura da linha */
 body {
   min-height: 100vh;
   line-height: 1.5;
-  -webkit-font-smoothing: antialiased; /* Suaviza fontes no macOS */
+  -webkit-font-smoothing: antialiased;
 }
 
-/* Corrige a renderização de elementos de mídia para evitar espaços fantasmas */
-img, picture, video, canvas, svg {
+/*
+ * Evita espaços abaixo das mídias e impede que elas ultrapassem a largura do
+ * elemento que as contém.
+ */
+img,
+picture,
+video,
+canvas,
+svg {
   display: block;
   max-width: 100%;
 }
 
-/* Corrige elementos de formulário que ignoravam as fontes do elemento pai */
-input, button, textarea, select {
+/* ==========================================================================
+   4. FORMULÁRIOS
+   ========================================================================== */
+
+/* Faz com que os controles utilizem a mesma tipografia do restante da página. */
+input,
+button,
+textarea,
+select {
   font: inherit;
 }
 
-/* Remove a bordinha padrão de botões e define o cursor pointer */
-button {
-  cursor: pointer;
-  background: none;
-  border: none;
-}
-
 /* ==========================================================================
-   3. LIMPEZA ESTRUTURAL (Inspirado no Eric Meyer - Versão Suave)
+   5. TEXTOS
    ========================================================================== */
 
-/* Remove os marcadores de listas (muito útil para menus e grids) */
-ol, ul {
-  list-style: none;
-}
-
-/* Remove a cor azul e o sublinhado padrão dos links */
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-/* ==========================================================================
-   4. TIPOGRAFIA AVANÇADA E MODERNIDADES (Inspirado no Josh Comeau)
-   ========================================================================== */
-
-/* Evita que textos longos ou URLs quebrem e vazem do layout */
-p, h1, h2, h3, h4, h5, h6 {
+/* Impede que palavras longas ou endereços ultrapassem seus contêineres. */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   overflow-wrap: break-word;
-}
-
-/* Evita palavras "órfãs" (solitárias) no final dos parágrafos */
-p {
-  text-wrap: pretty;
-}
-
-/* Distribui os títulos de várias linhas de forma equilibrada e bonita */
-h1, h2, h3, h4, h5, h6 {
-  text-wrap: balance;
-  font-weight: 700; /* Garante que os títulos mantenham o negrito padrão */
-}
-
-/* ==========================================================================
-   5. ISOLAMENTO DE CAMADAS (Opcional - para React, Vue, Next, etc.)
-   ========================================================================== */
-#root, #__next, .app-container {
-  isolation: isolate;
 }
